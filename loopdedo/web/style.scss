@@ -12,7 +12,7 @@ body {
     background-color: $cambridge-blue;
 }
 
-article.card {
+article.card, article.card {
     padding: 0.5rem 2rem;
     background-color: $pale-purple;
     border-radius: 0.5rem;
@@ -21,6 +21,15 @@ article.card {
     flex-direction: column;
     justify-items: center;
     gap: 0.1rem;
+    position: relative;
+    .icon {
+        position: absolute;
+        right: 0.8rem; top: 1rem;
+    }
+}
+
+article.card.input {
+    gap: 0.4rem;
 }
 
 footer.card-footer {
@@ -29,9 +38,14 @@ footer.card-footer {
     justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
+    font-size: 0.8rem;
     .button {
         margin-left: auto;
         justify-self: flex-end;
+        border-radius: 8px;
+        border-width: 1px;
+        border-color: $raisin-black;
+        background-color: color.adjust($purpureus, $lightness: +20%);
     }
 }
 
@@ -52,10 +66,20 @@ select, input[type=text], input[type=date] {
     border: 2px;
     border-bottom-style: solid;
     border-color: color.adjust($raisin-black, $lightness: +40%);
-    height: 1.5rem;
+    height: 1.6rem;
     background-color: $pale-purple;
     color: $raisin-black;
-    
+    font-family: "Dosis", "Helvetica", "sans-serif";
+    font-weight: 500;
+}
+
+select:focus, input:focus {
+    outline: none;
+    outline-style: none;
+    border: 2px;
+    border-style: none;
+    border-bottom-style: solid;
+    border-color: $purpureus;
 }
 
 input::placeholder {
