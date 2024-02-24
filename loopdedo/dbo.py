@@ -1,13 +1,14 @@
 """Peewee database models for ORM."""
 
 from peewee import (
-    SqliteDatabase,
-    Model,
-    CharField,
     AutoField,
+    CharField,
     DateField,
-    IntegerField,
     ForeignKeyField,
+    IntegerField,
+    Model,
+    SqliteDatabase,
+    TimestampField,
 )
 
 db = SqliteDatabase("demo.db")
@@ -18,8 +19,9 @@ class Todo(Model):
     id = AutoField()
     description = CharField()
     frequency = IntegerField()
-    last_completed = DateField(null=True)
-    last_delayed = DateField(null=True)
+    due_date = DateField(null=True)
+    last_completed = TimestampField(null=True)
+    last_delayed = TimestampField(null=True)
 
     class Meta:
         """Table metadata."""
