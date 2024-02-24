@@ -1,0 +1,63 @@
+@use 'sass:color';
+
+$pale-purple: #feeafa;
+$raisin-black: #342e37;
+$purpureus: #944bbb;
+$cambridge-blue: #7d938a;
+
+body {
+    font-family: "Dosis", "Helvetica", "sans-serif";
+    font-weight: 500;
+    color: $raisin-black;
+    background-color: $cambridge-blue;
+}
+
+article.card {
+    padding: 0.5rem 2rem;
+    background-color: $pale-purple;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 5px $raisin-black;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 0.1rem;
+}
+
+footer.card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    .button {
+        margin-left: auto;
+        justify-self: flex-end;
+    }
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.todo-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin: 1rem;
+}
+
+select, input[type=text], input[type=date] {
+    box-sizing: border-box;
+    padding: 0.2rem 0.4rem;
+    border: 2px;
+    border-bottom-style: solid;
+    border-color: color.adjust($raisin-black, $lightness: +40%);
+    height: 1.5rem;
+    background-color: $pale-purple;
+    color: $raisin-black;
+    
+}
+
+input::placeholder {
+    color: $raisin-black;
+}

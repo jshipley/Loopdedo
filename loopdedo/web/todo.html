@@ -4,33 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Loopdedo</title>
 </head>
 <body>
     <div class="todo-column">
-        <div class="card">
-            <div class="card-content">
+        <article class="card">
+            <label class="strikethrough">
                 <input type="checkbox" class="checkbox" checked id="card-0" />
-                <label for="card-0" class="strikethrough">Todo list item</label>
-            </div>
+                Todo list item
+            </label>
             <footer class="card-footer">recurring Daily [12/12/2024]</footer>
-        </div>
-        <div class="card">
-            <div class="card-content">
+        </article>
+        <article class="card">
+            <label>
                 <input type="checkbox" class="checkbox" id="card-1" />
-                <label for="card-1">Todo list item</label>
-            </div>
+                Todo list item
+            </label>
             <footer class="card-footer">recurring Daily [12/12/2024]</footer>
-        </div>
-        <div class="card">
-            <div class="card-content">
+        </article>
+        <article class="card">
+            <label for="card-2">
                 <input type="checkbox" class="checkbox" id="card-2" />
-                <label for="card-2">Todo list item</label>
-            </div>
+                Todo list item
+            </label>
             <footer class="card-footer">recurring Daily [12/12/2024]</footer>
-        </div>
+        </article>
+        <article class="card">
+            <input class="input" type="text" placeholder="Add new to-do">
+            <footer class="card-footer">
+                <select>
+                    <option>Daily</option>
+                    <option>Monthly</option>
+                    <option>Yearly</option>
+                </select>
+                <input class="input" type="date">
+                <button class="button">Add</button>
+            </footer>
+        </article>
     </div>
 </body>
 </html>
