@@ -20,8 +20,8 @@ class Todo(Model):
     description = CharField()
     frequency = IntegerField()
     due_date = DateField(null=True)
-    last_completed = TimestampField(null=True)
-    last_delayed = TimestampField(null=True)
+    last_completed = TimestampField(null=True, default=None)
+    last_delayed = TimestampField(null=True, default=None)
 
     class Meta:
         """Table metadata."""
