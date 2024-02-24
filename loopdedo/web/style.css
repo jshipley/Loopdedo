@@ -1,0 +1,10 @@
+.todo-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 2rem;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
